@@ -3,24 +3,28 @@ export const SKILLS = [
         title: "Frontend",
         icon: "./assets/images/front-end.png",
         skills: [
-            {skill: "HTML5", percentage: "80%"},
-            {skill: "CSS3 (Sass/SCSS)", percentage: "90%"},
+            {skill: "React.js", percentage: "90%"},
             {skill: "JavaScript", percentage: "75%"},
-            {skill: "React.js", percentage: "80%"},
+            {skill: "React Native", percentage: "70%"},
+            {skill: "Typescript", percentage: "80%"},
+            {skill: "CSS3", percentage: "90%"},
         ],
     },
     {
         title: "Backend",
         icon: "./assets/images/backend.png",
         skills: [
-            {skill: "Java", percentage: "70%"},
-            {skill: "Node.js", percentage: "65%"},
+            {skill: "Java", percentage: "65%"},
+            {skill: "Node.js", percentage: "80%"},
         ],
     },
     {
         title: "Framework",
         icon: "./assets/images/screwdriver.png",
         skills: [
+            {skill: "Prime React", percentage: "75%"},
+            {skill: "React Native Paper", percentage: "70%"},
+            {skill: "Prime Flex", percentage: "80%"},
             {skill: "Bootstrap (CSS)", percentage: "80%"},
             {skill: "Tailwind (CSS)", percentage: "70%"},
         ],
@@ -49,7 +53,17 @@ export const SKILLS = [
 
 export const WORK_EXPERIENCE = [
     {
-        title: "Frontend Developer at Accopixel Technologies",
+        title: "Sotfware Developer at Webpristine Technologies",
+        date: "January 2025 - Present",
+        responsibility: [
+            "Developed a responsive website using React.js, HTML5, CSS3, and JavaScript.",
+            "Implemented responsive design to ensure the website is accessible on all devices.",
+            "Optimized website performance by implementing caching and minification techniques.",
+            "Collaborated with the backend team to ensure seamless integration of the frontend and backend components."
+        ],
+    },
+    {
+        title: "Sotfware Developer at Webpristine Technologies",
         date: "July 2024 - Present",
         responsibility: [
             "Developed a responsive website using React.js, HTML5, CSS3, and JavaScript.",
@@ -59,18 +73,8 @@ export const WORK_EXPERIENCE = [
         ],
     },
     {
-        title: "Junior Frontend Developer at DUCAT PVT LTD",
-        date: "June 2023 - July 2024",
-        responsibility: [
-            "Developed a responsive website using React.js, HTML5, CSS3, and JavaScript.",
-            "Implemented responsive design to ensure the website is accessible on all devices.",
-            "Optimized website performance by implementing caching and minification techniques.",
-            "Collaborated with the backend team to ensure seamless integration of the frontend and backend components."
-        ],
-    },
-    {
-        title: "Frontend Developer Intern at Udemy",
-        date: "January 2022 - June 2023",
+        title: "Sotfware Developer at Webpristine Technologies",
+        date: "July 2024 - Present",
         responsibility: [
             "Developed a responsive website using React.js, HTML5, CSS3, and JavaScript.",
             "Implemented responsive design to ensure the website is accessible on all devices.",
