@@ -14,8 +14,8 @@ export const SKILLS = [
         title: "Backend",
         icon: "./assets/images/backend.png",
         skills: [
-            {skill: "Java", percentage: "65%"},
             {skill: "Node.js", percentage: "80%"},
+            {skill: "Java", percentage: "65%"},
         ],
     },
     {
@@ -82,4 +82,44 @@ export const WORK_EXPERIENCE = [
             "Collaborated with the backend team to ensure seamless integration of the frontend and backend components."
         ],
     },
+];
+
+
+
+export const projectData = [
+  {
+    id: 1,
+    title: "E-Commerce App",
+    subtitle: "React + Node.js",
+    image: "https://primefaces.org/cdn/primereact/images/usercard.png",
+    description: "Built a responsive e-commerce platform with secure payment gateway and admin dashboard."
+  },
+  {
+    id: 2,
+    title: "Portfolio Website",
+    subtitle: "React + Tailwind",
+    image: "https://primefaces.org/cdn/primereact/images/usercard.png",
+    description: "Designed and developed a personal portfolio with animations and responsive UIjbj."
+  },
+  {
+    id: 3,
+    title: "Chat App",
+    subtitle: "React + Firebase",
+    image: "https://primefaces.org/cdn/primereact/images/usercard.png",
+    description: "Real-time chat application with Google Auth and chatroom features using Firebase."
+  },
+  {
+    id: 4,
+    title: "Chat App",
+    subtitle: "React + Firebase",
+    image: "https://primefaces.org/cdn/primereact/images/usercard.png",
+    description: "Real-time chat application with Google Auth and chatroom features using Firebase."
+  },
+  {
+    id: 5,
+    title: "E-Commerce App",
+    subtitle: "React + Node.js",
+    image: "https://primefaces.org/cdn/primereact/images/usercard.png",
+    description: "Built a responsive e-commerce platform with secure payment gateway and admin dashboard."
+  },
 ];

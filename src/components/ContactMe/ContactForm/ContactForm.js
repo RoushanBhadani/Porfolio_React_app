@@ -1,22 +1,112 @@
-import React from 'react';
-import './ContactForm.css';
+import React, { useEffect, useState } from "react";
+import { useFormik } from "formik";
+import { initialValues, validationSchema } from "./formConfig";
+import { useCreateContactMutation } from "../../../redux/slice/apiSlice";
+
+import "./ContactForm.css";
 
 const ContactForm = () => {
+  const [createPost, { isLoading, isSuccess, error }] = useCreateContactMutation();
+  const [showForm, setShowForm] = useState(true);
+
+  const formik = useFormik({
+    initialValues,
+    validationSchema,
+    onSubmit: async (values, { resetForm }) => {
+      try {
+        await createPost(values).unwrap();
+        resetForm();
+      } catch (err) {
+        console.error("Error submitting form:", err);
+      }
+    },
+  });
+
+  const getPlaceholder = (name, defaultText) => {
+    return formik.touched[name] && formik.errors[name]
+      ? formik.errors[name]
+      : defaultText;
+  };
+
+  useEffect(() => {
+    if (isSuccess) {
+      setShowForm(false);
+      const timer = setTimeout(() => {
+        setShowForm(true);
+      }, 5000);
+      return () => clearTimeout(timer);
+    }
+  }, [isSuccess]);
+
   return (
     <div className="contact-form-content">
-        <form>
-            <div className="name-container">
-                <input type='text' name='firstname' placeholder='First Name'/>
-                <input type='text' name='lastname' placeholder='Last Name'/>
-            </div>
-            
-            <input type='text' name='email' placeholder='Email'/>
-            <textarea type='text' name='message' placeholder='Message' rows={3}/>
+      {showForm ? (
+        <form onSubmit={formik.handleSubmit}>
+          <div className="name-container">
+            <input
+              type="text"
+              name="firstname"
+              placeholder={getPlaceholder("firstname", "First Name *")}
+              {...formik.getFieldProps("firstname")}
+              className={
+                formik.touched.firstname && formik.errors.firstname ? "error-border" : ""
+              }
+            />
 
-            <button>Send</button>
+            <input
+              type="text"
+              name="lastname"
+              placeholder={getPlaceholder("lastname", "Last Name")}
+              {...formik.getFieldProps("lastname")}
+              className={
+                formik.touched.lastname && formik.errors.lastname ? "error-border" : ""
+              }
+            />
+          </div>
+
+          <input
+            type="text"
+            name="email"
+            placeholder={getPlaceholder("email", "Email *")}
+            {...formik.getFieldProps("email")}
+            className={
+              formik.touched.email && formik.errors.email ? "error-border" : ""
+            }
+          />
+
+          <input
+            type="text"
+            name="mobile"
+            placeholder={getPlaceholder("mobile", "Mobile Number *")}
+            {...formik.getFieldProps("mobile")}
+            className={
+              formik.touched.mobile && formik.errors.mobile ? "error-border" : ""
+            }
+          />
+
+          <textarea
+            name="description"
+            rows={3}
+            placeholder={getPlaceholder("description", "Message *")}
+            {...formik.getFieldProps("description")}
+            className={
+              formik.touched.description && formik.errors.description
+                ? "error-border"
+                : ""
+            }
+          />
+
+          <button type="submit" disabled={isLoading}>
+            {isLoading ? "Sending" : "Send"}
+          </button>
         </form>
+      ) : (
+        <div className="text-center">
+          <h3 className="text-6xl">🎉 Thank you! Your message has been sent.</h3>
+        </div>
+      )}
     </div>
-  )
-}
+  );
+};
 
-export default ContactForm
+export default ContactForm;

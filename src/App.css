@@ -1,8 +1,22 @@
+html {
+  scroll-padding-top: 100px; 
+  scroll-behavior: smooth;
+}
+
+.p-carousel-prev,
+.p-carousel-next {
+  color: #f57900 !important;
+  background-color: transparent !important;
+  border: none !important;
+  font-size: 1.5rem !important;
+}
+
 .container{
     max-width: 1300px !important;
     margin: 0 auto; 
     position: relative;
 }
+
 
 @media (max-width:1300px){
     .container{

@@ -1,68 +1,104 @@
-import React, { useState } from 'react';
-import './Navbar.css';
-import MobileNav from './MobileNav/MobileNav';
-// import { BrowserRouter, Route, Routes, useNavigate, Link } from 'react-router-dom';
-// import Hero from '../Hero/Hero';
-// import Skills from '../Skills/Skills';
-// import WorkExperience from '../WorkExperience/WorkExperience';
-// import ContactMe from '../ContactMe/ContactMe';
-
+import { useState } from "react";
+import "./Navbar.css";
+import MobileNav from "./MobileNav/MobileNav";
+import { useNavigate } from "react-router-dom";
+import { Button } from "primereact/button";
 
 const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(false);
-
-  // const navigate = useNavigate()
+  const navigate = useNavigate();
   const toggleMenu = () => {
     setOpenMenu(!openMenu);
   };
 
-  // function openContactForm(){
-  //   navigate('/contact')
-  // }
+  const handleNavClick = (sectionId) => {
+    navigate("/");
+    setTimeout(() => {
+      document
+        .getElementById(sectionId)
+        ?.scrollIntoView({ behavior: "smooth" });
+    }, 100);
+  };
 
   return (
     <>
-      <MobileNav isOpen={openMenu} toggleMenu={toggleMenu} />
+      <MobileNav isOpen={openMenu} toggleMenu={toggleMenu} handleNavClick={handleNavClick}/>
 
-      <nav className='nav-wrapper'>
-        <div className='nav-content'>
-          <img className='logo' src="./assets/images/roushan-logo.png" alt='Roushan' />
+      <nav className="nav-wrapper">
+        <div className="nav-content">
+          <img
+            className="logo"
+            src="./assets/images/roushan-logo.png"
+            alt="Roushan"
+          />
 
-          {/* <BrowserRouter> */}
           <ul>
             <li>
-              <a className="menu-item" href="#home">Home</a>
+              <span
+                className="menu-item"
+                onClick={() => handleNavClick("home")}
+              >
+                Home
+              </span>
             </li>
             <li>
-              <a className="menu-item" href="#skills">Skills</a>
+              <span
+                className="menu-item"
+                onClick={() => handleNavClick("skills")}
+              >
+                Skills
+              </span>
             </li>
             <li>
-              <a className="menu-item" href="#work-experience">Work Experience</a>
+              <span
+                className="menu-item"
+                onClick={() => handleNavClick("work-experience")}
+              >
+                Work Experience
+              </span>
             </li>
             <li>
-              <a className="menu-item" href="#contact">Contact Me</a>
+              <a className="menu-item" href="/projects">
+                Projects
+              </a>
             </li>
-            <button className='contact-btn' onClick={() => {}}>Hire Me</button>
+            <li>
+              <span
+                className="menu-item"
+                onClick={() => handleNavClick("contact")}
+              >
+                Contact Me
+              </span>
+            </li>
+
+            <button
+              className="contact-btn"
+              onClick={() => {
+                const link = document.createElement("a");
+                link.href = "/assets/resume/RoushanBhadaniResume.pdf";
+                link.download = "Roushan_Resume.pdf";
+                link.click();
+              }}
+            >
+              Resume
+            </button>
+
+            <button className="contact-btn" onClick={() => {}}>
+              Hire Me
+            </button>
           </ul>
-          {/* <Routes>
-            <Route path='/home' element={<Hero/>}></Route>
-            <Route path='/skills' element={<Skills/>}></Route>
-            <Route path='/work-experience' element={<WorkExperience/>}></Route>
-            <Route path='/contact' element={<ContactMe/>}></Route>
-          </Routes>
-          </BrowserRouter> */}
-
-         
-
-          <button className='menu-btn' onClick={toggleMenu}>
-            <span className='material-symbols-outlined' style={{ fontSize: "1.8rem" }}>
+          <button className="menu-btn" onClick={toggleMenu}>
+            <span
+              className="material-symbols-outlined"
+              style={{ fontSize: "1.8rem" }}
+            >
               {openMenu ? "close" : "menu"}
             </span>
           </button>
         </div>
       </nav>
     </>
-  )
-}
+  );
+};
 
 export default Navbar;

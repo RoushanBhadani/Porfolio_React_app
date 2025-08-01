@@ -43,6 +43,16 @@ form button:hover {
     background: transparent;
 }
 
+.error-border {
+  border: 1px solid red;
+}
+
+input.error-border::placeholder,
+textarea.error-border::placeholder {
+  color: red;
+}
+
+
 @media (max-width: 450px){
     .name-container {
         flex-direction: column;

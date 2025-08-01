@@ -3,7 +3,7 @@ import './Footer.css';
 
 const Footer = () => {
   return (
-    <div className='footer'>2024 Roushan Portfolio, Namaste India</div>
+    <div className='footer'>2025 Roushan Portfolio, Namaste India</div>
   )
 }
 

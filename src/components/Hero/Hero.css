@@ -47,6 +47,38 @@
     background-size: 80%;
 }
 
+.tech-carousel {
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.tech-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tech-image {
+  transition: transform 0.3s ease;
+}
+
+.tech-image:hover {
+  transform: scale(1.1);
+}
+
+
+/* Make carousel navigation arrows orange */
+.tech-carousel .p-carousel-prev,
+.tech-carousel .p-carousel-next {
+  color: #f57900 !important;
+  background-color: transparent !important;
+  border: none !important;
+  font-size: 1.5rem !important;
+}
+
+
+
+
 @keyframes shine {
     0% {
       background-position-x: -500%;

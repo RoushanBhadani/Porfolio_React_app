@@ -1,7 +1,7 @@
 import React from 'react';
 import './ContactInfoCard.css';
 
-const ContactInfoCard = ({iconUrl, text}) => {
+const ContactInfoCard = ({iconUrl, text, url}) => {
   return (
     <div className='contact-details-card'>
         <div className='icon'>
