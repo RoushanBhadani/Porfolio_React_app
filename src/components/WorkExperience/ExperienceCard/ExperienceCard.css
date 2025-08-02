@@ -54,3 +54,33 @@
         font-size: 0.75rem;
     }
 }
+
+@media (max-width: 425px) {
+    .work-exp-card {
+        padding: 1rem;
+        border-radius: 0.5rem;
+        margin: 0;
+    }
+
+    .work-exp-card h6 {
+        font-size: 0.9rem;
+    }
+
+    .work-duration {
+        font-size: 0.65rem;
+        padding: 0.3rem 0.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .work-exp-card ul li {
+        font-size: 0.7rem;
+        margin-bottom: 0.4rem;
+    }
+
+    .work-exp-card ul li::after {
+        width: 0.4rem;
+        height: 0.4rem;
+        top: 0.3rem;
+        left: -1rem;
+    }
+}

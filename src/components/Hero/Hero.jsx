@@ -23,15 +23,16 @@ const techIcons = [
 
 const techTemplate = (item) => {
   return (
-    <div className="p-d-flex p-ai-center p-jc-center tech-icon">
+    <div className="flex align-items-center justify-content-center tech-icon">
       <img
         src={item.image}
         alt={item.alt}
-        style={{ width: "60px", height: "60px" }}
+        className="tech-image"
       />
     </div>
   );
 };
+
 
 const Hero = () => {
   const responsiveOptions = [
@@ -46,16 +47,22 @@ const Hero = () => {
       numScroll: 1,
     },
     {
-      breakpoint: "767px",
+      breakpoint: "991px",
       numVisible: 3,
       numScroll: 1,
     },
     {
-      breakpoint: "575px",
+      breakpoint: "767px",
       numVisible: 2,
       numScroll: 1,
     },
+    {
+      breakpoint: "480px",
+      numVisible: 1,
+      numScroll: 1,
+    },
   ];
+
   return (
     <>
       <section className="hero-container">
@@ -78,16 +85,20 @@ const Hero = () => {
           </div>
         </div>
       </section>
-      <div className="tech-carousel">
-        <Carousel
-          value={techIcons}
-          numVisible={4}
-          numScroll={4}
-          autoplayInterval={2000}
-          showIndicators={false}
-          itemTemplate={techTemplate}
-          responsiveOptions={responsiveOptions}
-        />
+
+      <div className="tech-carousel-wrapper">
+        <div className="tech-carousel">
+          <Carousel
+            value={techIcons}
+            numVisible={6}
+            numScroll={1}
+            autoplayInterval={2000}
+            showIndicators={false}
+            circular
+            itemTemplate={techTemplate}
+            responsiveOptions={responsiveOptions}
+          />
+        </div>
       </div>
     </>
   );

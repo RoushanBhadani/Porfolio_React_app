@@ -40,6 +40,14 @@
     right: -2rem;
 }
 
+.experience-content {
+    width: 100%;
+    overflow-x: hidden;
+    padding: 0 1rem;
+}
+
+
+
 @media (max-width: 1025px) {
     .arrow-left {
         left: 0rem;
@@ -51,16 +59,40 @@
 }
 
 @media (max-width: 768px) {
-    .experience-container h5 {
-        font-size: 1.3rem;
-        margin-bottom: 2rem;
+    .arrow-left,
+    .arrow-right {
+        top: 90%;
+        transform: translateY(-50%);
     }
 
     .arrow-left {
-        left: -1rem;
+        left: 0;
     }
 
     .arrow-right {
-        right: -1rem;
+        right: 0;
+    }
+}
+
+@media (max-width: 425px) {
+    .arrow-left,
+    .arrow-right {
+        top: 90%; /* Move down below the card */
+        transform: translateY(-50%);
+        width: 2rem;
+        height: 2rem;
+    }
+
+    .arrow-left {
+        left: 0.5rem;
+    }
+
+    .arrow-right {
+        right: 0.5rem;
+    }
+
+    .experience-container h5 {
+        font-size: 1.2rem;
+        text-align: center;
     }
 }

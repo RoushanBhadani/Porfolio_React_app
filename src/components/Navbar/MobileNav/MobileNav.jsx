@@ -1,5 +1,6 @@
 import React from "react";
 import "./MobileNav.css";
+import { Link } from "react-router-dom";
 
 const MobileNav = ({ isOpen, toggleMenu, handleNavClick }) => {
   return (
@@ -36,9 +37,9 @@ const MobileNav = ({ isOpen, toggleMenu, handleNavClick }) => {
               </span>
             </li>
             <li>
-              <a className="menu-item" href="/projects">
+              <Link className="menu-item" to="/projects">
                 Projects
-              </a>
+              </Link>
             </li>
             <li>
               <span

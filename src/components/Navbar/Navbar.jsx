@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./Navbar.css";
 import MobileNav from "./MobileNav/MobileNav";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Button } from "primereact/button";
 
 const Navbar = () => {
@@ -58,9 +58,7 @@ const Navbar = () => {
               </span>
             </li>
             <li>
-              <a className="menu-item" href="/projects">
-                Projects
-              </a>
+              <Link className="menu-item" to="/projects">Projects</Link>
             </li>
             <li>
               <span
@@ -90,7 +88,7 @@ const Navbar = () => {
           <button className="menu-btn" onClick={toggleMenu}>
             <span
               className="material-symbols-outlined"
-              style={{ fontSize: "1.8rem" }}
+              style={{ fontSize: "1.5rem" }}
             >
               {openMenu ? "close" : "menu"}
             </span>

@@ -1,4 +1,3 @@
-import React from 'react';
 import './App.css';
 import Navbar from './components/Navbar/Navbar';
 import Hero from './components/Hero/Hero';
@@ -6,8 +5,8 @@ import Skills from './components/Skills/Skills';
 import WorkExperience from './components/WorkExperience/WorkExperience';
 import ContactMe from './components/ContactMe/ContactMe';
 import Footer from './components/Footer/Footer';
-import Projects from './components/Projects/Projects';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Projects from './components/Projects/Projects';
 
 const App = () => {
   return (
