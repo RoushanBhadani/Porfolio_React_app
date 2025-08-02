@@ -7,32 +7,20 @@ const techIcons = [
   { image: "./assets/images/html.png", alt: "HTML" },
   { image: "./assets/images/css-3.png", alt: "CSS" },
   { image: "./assets/images/js-file.png", alt: "JavaScript" },
-  { image: "./assets/images/physics.png", alt: "React" },
-  { image: "./assets/images/html.png", alt: "HTML" },
-  { image: "./assets/images/css-3.png", alt: "CSS" },
-  { image: "./assets/images/js-file.png", alt: "JavaScript" },
-  { image: "./assets/images/physics.png", alt: "React" },
-  { image: "./assets/images/html.png", alt: "HTML" },
-  { image: "./assets/images/css-3.png", alt: "CSS" },
-  { image: "./assets/images/js-file.png", alt: "JavaScript" },
-  { image: "./assets/images/physics.png", alt: "React" },
-  { image: "./assets/images/html.png", alt: "HTML" },
-  { image: "./assets/images/css-3.png", alt: "CSS" },
-  { image: "./assets/images/js-file.png", alt: "JavaScript" },
+  { image: "./assets/images/redux.png", alt: "React" },
+  { image: "./assets/images/nodejs.png", alt: "HTML" },
+  { image: "./assets/images/reactnative.png", alt: "CSS" },
+  { image: "./assets/images/typescript.png", alt: "JavaScript" },
+  { image: "./assets/images/reactnativepapersvg.svg", alt: "React" },
 ];
 
 const techTemplate = (item) => {
   return (
     <div className="flex align-items-center justify-content-center tech-icon">
-      <img
-        src={item.image}
-        alt={item.alt}
-        className="tech-image"
-      />
+      <img src={item.image} alt={item.alt} className="tech-image" />
     </div>
   );
 };
-
 
 const Hero = () => {
   const responsiveOptions = [
@@ -71,6 +59,12 @@ const Hero = () => {
             Hi, I'm <span className="hero-name">ROUSHAN</span>
           </h2>
           <h4>Transforming Ideas into Digital Reality</h4>
+          <p className="experience-text">
+            Work Experience: <a className="highlight">7 Months</a>
+          </p>
+          <p className="experience-text">
+            Contact Number: <a href="tel:7484030370" className="highlight">7484030370</a>
+          </p>
           <p>
             <span className="first-p">
               Innovative Frontend Creator | Building Sleek and User-Friendly Web

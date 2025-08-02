@@ -1,28 +1,90 @@
-import { Card } from 'primereact/card';
-import { Button } from 'primereact/button';
-import { projectData } from '../../utils/data';
-
+import { Card } from "primereact/card";
+import { Button } from "primereact/button";
+import { projectData } from "../../utils/data";
+import { useNavigate } from "react-router-dom";
+import "./Projects.css";
 
 export default function Projects() {
+  const navigate = useNavigate();
+
   return (
     <div className="grid p-4">
       {projectData?.map((project) => (
-        <div key={project.id} className="col-12 md:col-3 lg:col-4">
+        <div key={project.id} className="col-12 md:col-4 lg:col-4">
           <Card
             title={project.title}
             subTitle={project.subtitle}
-            header={<img alt="Project" src={project.image} className="w-full h-12rem object-cover" />}
+            header={
+              <img
+                alt="Project"
+                src={project.image}
+                className="w-full h-12rem object-cover"
+              />
+            }
             footer={
-              <div className="flex justify-content-end">
-                <Button label="View" />
+              <div className="flex justify-content-between align-items-center w-full">
+                <div>
+                  <div className="meta-item">
+                    <span className="meta-label">Level:</span> {project?.level}
+                  </div>
+                  <div className="meta-item">
+                    <span className="meta-label">Type:</span>{" "}
+                    {project?.company ? "Company" : "Personal"}
+                  </div>
+                </div>
+
+                <div>
+                  {project?.link ? (
+                    <Button
+                      severity="warning"
+                      label="View"
+                      onClick={() =>
+                        window.open(
+                          project.link,
+                          "_blank",
+                          "noopener,noreferrer"
+                        )
+                      }
+                      className="p-button-sm"
+                    />
+                  ) : (
+                    <Button
+                      severity="warning"
+                      label="Not Live"
+                      className="p-button-sm"
+                      disabled
+                    />
+                  )}
+                </div>
               </div>
             }
-            className="h-full flex flex-column justify-content-between shadow-3"
-            style={{ minHeight: '100%' }}
+            pt={{
+              title: { style: { minHeight: "2.5rem" } },
+              subTitle: { style: { minHeight: "1.5rem" } },
+              root: {
+                style: {
+                  display: "flex",
+                  flexDirection: "column",
+                  height: "100%",
+                },
+              },
+              body: {
+                style: {
+                  display: "flex",
+                  flexDirection: "column",
+                  flex: 1,
+                  justifyContent: "space-between",
+                },
+              },
+              footer: {
+                style: {
+                  marginTop: "auto",
+                },
+              },
+            }}
+            className="shadow-3"
           >
-            <div className="flex-grow-1">
-              <p className="m-0">{project.description}</p>
-            </div>
+            <p className="m-0">{project.description}</p>
           </Card>
         </div>
       ))}

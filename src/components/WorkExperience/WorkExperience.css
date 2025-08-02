@@ -1,98 +1,39 @@
-.experience-container {
-    margin: 4rem 0;
-    position: relative;
-}
-
-.experience-container h5 {
+.experience-container h5{
     font-size: 1.5rem;
     font-weight: 600;
-    margin-bottom: 3rem;
+    margin-bottom: 3.5rem;
 }
 
-.arrow-left,
-.arrow-right {
-    width: 2.2rem;
-    height: 2.2rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #f57900;
-    border-radius: 0.65rem;
-    border: 1.5px solid #f57900;
-    background: rgb(16, 16, 44);
-    position: absolute;
-    top: 55%;
-    z-index: 2;
-    cursor: pointer;
+.experience-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+  gap: 1.5rem;
+  margin-top: 1rem;
+  padding: 0; 
 }
 
-.arrow-left span,
-.arrow-right span {
-    font-size: 2rem;
-    font-weight: 500;
-}
-
-.arrow-left {
-    left: -2rem;
-}
-
-.arrow-right {
-    right: -2rem;
-}
-
-.experience-content {
-    width: 100%;
-    overflow-x: hidden;
-    padding: 0 1rem;
-}
-
-
-
-@media (max-width: 1025px) {
-    .arrow-left {
-        left: 0rem;
-    }
-
-    .arrow-right {
-        left: 0rem;
-    }
+@media (max-width: 1024px) {
+  .experience-grid {
+    gap: 1rem;
+  }
 }
 
 @media (max-width: 768px) {
-    .arrow-left,
-    .arrow-right {
-        top: 90%;
-        transform: translateY(-50%);
-    }
+  .experience-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+  }
 
-    .arrow-left {
-        left: 0;
-    }
-
-    .arrow-right {
-        right: 0;
-    }
+  .experience-container h5{
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+  
+}
 }
 
-@media (max-width: 425px) {
-    .arrow-left,
-    .arrow-right {
-        top: 90%; /* Move down below the card */
-        transform: translateY(-50%);
-        width: 2rem;
-        height: 2rem;
-    }
-
-    .arrow-left {
-        left: 0.5rem;
-    }
-
-    .arrow-right {
-        right: 0.5rem;
-    }
-
-    .experience-container h5 {
-        font-size: 1.2rem;
-        text-align: center;
-    }
+@media (max-width: 480px) {
+  .experience-grid {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+  }
 }

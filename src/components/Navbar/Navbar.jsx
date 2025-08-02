@@ -81,14 +81,14 @@ const Navbar = () => {
               Resume
             </button>
 
-            <button className="contact-btn" onClick={() => {}}>
+            <button className="contact-btn" onClick={() => {handleNavClick("contact")}}>
               Hire Me
             </button>
           </ul>
           <button className="menu-btn" onClick={toggleMenu}>
             <span
               className="material-symbols-outlined"
-              style={{ fontSize: "1.5rem" }}
+              style={{ fontSize: "1.8rem" }}
             >
               {openMenu ? "close" : "menu"}
             </span>

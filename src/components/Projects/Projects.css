@@ -1,0 +1,18 @@
+.custom-height {
+  padding: 0.25rem 0.75rem !important; 
+  font-size: 0.8rem !important;        
+  line-height: 1.2 !important;
+  height: 28px !important;             
+}
+
+.meta-item {
+  font-size: 0.9rem;
+  color: #f57900; 
+}
+
+.meta-label {
+  font-weight: 600;
+  color: #f57900;
+ 
+}
+
