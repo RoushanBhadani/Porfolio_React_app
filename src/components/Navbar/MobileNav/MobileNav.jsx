@@ -62,7 +62,7 @@ const MobileNav = ({ isOpen, toggleMenu, handleNavClick }) => {
               Resume
             </button>
 
-            <button className="contact-btn" onClick={() => {}}>
+            <button className="contact-btn" onClick={() => {handleNavClick("contact")}}>
               Hire Me
             </button>
           </ul>

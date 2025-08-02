@@ -60,7 +60,7 @@ const Hero = () => {
           </h2>
           <h4>Transforming Ideas into Digital Reality</h4>
           <p className="experience-text">
-            Work Experience: <a className="highlight">7 Months</a>
+            Working Experience
           </p>
           <p className="experience-text">
             Contact Number: <a href="tel:7484030370" className="highlight">7484030370</a>
