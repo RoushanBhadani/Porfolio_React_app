@@ -49,6 +49,8 @@
 }
 
 .skills-info{
+  width: 100%;
+  margin-bottom: 1rem;
     flex: 1;
 }
 
