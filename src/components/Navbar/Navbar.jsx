@@ -22,7 +22,11 @@ const Navbar = () => {
 
   return (
     <>
-      <MobileNav isOpen={openMenu} toggleMenu={toggleMenu} handleNavClick={handleNavClick}/>
+      <MobileNav
+        isOpen={openMenu}
+        toggleMenu={toggleMenu}
+        handleNavClick={handleNavClick}
+      />
 
       <nav className="nav-wrapper">
         <div className="nav-content">
@@ -58,7 +62,9 @@ const Navbar = () => {
               </span>
             </li>
             <li>
-              <Link className="menu-item" to="/projects">Projects</Link>
+              <Link className="menu-item" to="/projects">
+                Projects
+              </Link>
             </li>
             <li>
               <span
@@ -81,7 +87,12 @@ const Navbar = () => {
               Resume
             </button>
 
-            <button className="contact-btn" onClick={() => {handleNavClick("contact")}}>
+            <button
+              className="contact-btn"
+              onClick={() => {
+                handleNavClick("contact");
+              }}
+            >
               Hire Me
             </button>
           </ul>

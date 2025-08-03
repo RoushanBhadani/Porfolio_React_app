@@ -50,7 +50,7 @@ export default function Projects() {
                   ) : (
                     <Button
                       severity="warning"
-                      label="Not Live"
+                      label="Currently Working"
                       className="p-button-sm"
                       disabled
                     />
@@ -84,7 +84,11 @@ export default function Projects() {
             }}
             className="shadow-3"
           >
-            <p className="m-0">{project.description}</p>
+            <p
+              className="m-0"
+            >
+              {project.currentlyWorking ? "Description is not available yet." : project.description}
+            </p>
           </Card>
         </div>
       ))}
