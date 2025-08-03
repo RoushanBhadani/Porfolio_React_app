@@ -8,7 +8,7 @@ export default function Projects() {
   const navigate = useNavigate();
 
   return (
-    <div className="grid p-4">
+    <div className="grid m-4">
       {projectData?.map((project) => (
         <div key={project.id} className="col-12 md:col-4 lg:col-4">
           <Card
