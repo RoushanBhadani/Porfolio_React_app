@@ -26,6 +26,6 @@ export default defineConfig({
   ],
   build: {
     minify: false, 
-    outDir: 'build', 
+    outDir: 'dist', 
   },
 });
