@@ -1,12 +1,12 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
-import obfuscator from 'rollup-plugin-obfuscator';
+import obfuscator from 'vite-plugin-javascript-obfuscator';
 
 export default defineConfig({
   plugins: [
     react(),
-    {
-      ...obfuscator({
+    obfuscator(
+      {
         compact: true,
         controlFlowFlattening: true,
         controlFlowFlatteningThreshold: 0.75,
@@ -20,14 +20,12 @@ export default defineConfig({
         stringArrayEncoding: ['base64'],
         stringArrayThreshold: 0.75,
         selfDefending: true,
-      }),
-      apply: 'build',
-    },
+      },
+      ['**/*.js'] 
+    ),
   ],
-  server: {
-    open: true,
-  },
   build: {
     minify: false, 
+    outDir: 'build', 
   },
 });
