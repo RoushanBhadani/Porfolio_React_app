@@ -54,6 +54,16 @@
     flex: 1;
 }
 
+.skill-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.mobile-skill-info {
+  margin-top: 0.5rem;
+}
+
+
 @media (max-width: 1025px){
     .skills{
         padding-left: 1rem;
