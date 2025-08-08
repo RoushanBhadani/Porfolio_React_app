@@ -140,18 +140,18 @@ export const projectData = [
     description:
       "Created a mobile student portal for course access, mentor interaction, and exams. Integrated APIs for real-time data syncing, managed state with Recoil, and styled with React Native Paper.",
   },
-  {
-    id: 6,
-    title: "Replica Weapon Store",
-    subtitle: "React JS + Redux + Bootstrap + NodeJs",
-    image: "./assets/images/replicaweaponsestore.jpeg",
-    company: false,
-    level: "Intermediate",
-    currentlyWorking: false,
-    link: "https://replicaweaponstore.vercel.app/",
-    description:
-      "Developed an e-commerce store for replica weapons with product catalog, cart, and checkout flow. Integrated Node.js APIs and managed state using Redux.",
-  },
+  // {
+  //   id: 6,
+  //   title: "Replica Weapon Store",
+  //   subtitle: "React JS + Redux + Bootstrap + NodeJs",
+  //   image: "./assets/images/replicaweaponsestore.jpeg",
+  //   company: false,
+  //   level: "Intermediate",
+  //   currentlyWorking: false,
+  //   link: "https://replicaweaponstore.vercel.app/",
+  //   description:
+  //     "Developed an e-commerce store for replica weapons with product catalog, cart, and checkout flow. Integrated Node.js APIs and managed state using Redux.",
+  // },
   {
     id: 7,
     title: "Movieland",
