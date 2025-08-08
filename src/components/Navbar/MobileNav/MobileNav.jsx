@@ -54,7 +54,7 @@ const MobileNav = ({ isOpen, toggleMenu, handleNavClick }) => {
               className="contact-btn"
               onClick={() => {
                 const link = document.createElement("a");
-                link.href = "/assets/resume/RoushanBhadaniResume.pdf";
+                link.href = "/assets/resume/RoushanBhadaniResume_latest.pdf";
                 link.download = "Roushan_Resume.pdf";
                 link.click();
               }}

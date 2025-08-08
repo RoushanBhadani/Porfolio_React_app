@@ -94,6 +94,18 @@ export const projectData = [
   },
   {
     id: 2,
+    title: "Lead Management System",
+    subtitle: "React JS + Typescript + Redux Toolkit + Prime React + Prime Flex + Node JS",
+    image: "./assets/images/workinprogress.jpg",
+    company: true,
+    level: "Intermediate",
+    currentlyWorking: true,
+    link: "",
+    description:
+      "A full-stack API Market Place for students to buy and practice APIs with guided docs. Built with React, Redux Toolkit, PrimeReact, and Node.js, handling both frontend and backend with auth, API access, and purchase tracking.",
+  },
+  {
+    id: 3,
     title: "Click and Send",
     subtitle: "Next JS + Redux + MaterialUI",
     image: "./assets/images/clickandsend.jpeg",
@@ -105,7 +117,7 @@ export const projectData = [
       "Developed a delivery job platform with real-time driver matching, job posting, and tracking. Integrated secure authentication, REST APIs, and a responsive Material UI design.",
   },
   {
-    id: 3,
+    id: 4,
     title: "Techhut Academy",
     subtitle: "React JS + Bootstrap + Redux",
     image: "./assets/images/Techhut.jpeg",
@@ -117,7 +129,7 @@ export const projectData = [
       "Built an educational platform for course browsing and enrollment with Redux state management. Integrated backend APIs for dynamic course and user data.",
   },
   {
-    id: 4,
+    id: 5,
     title: "Techhut Student",
     subtitle: "React Native + Recoil + React Native Paper",
     image: "./assets/images/TechhutStudent.jpeg",
@@ -129,7 +141,7 @@ export const projectData = [
       "Created a mobile student portal for course access, mentor interaction, and exams. Integrated APIs for real-time data syncing, managed state with Recoil, and styled with React Native Paper.",
   },
   {
-    id: 5,
+    id: 6,
     title: "Replica Weapon Store",
     subtitle: "React JS + Redux + Bootstrap + NodeJs",
     image: "./assets/images/replicaweaponsestore.jpeg",
@@ -141,7 +153,7 @@ export const projectData = [
       "Developed an e-commerce store for replica weapons with product catalog, cart, and checkout flow. Integrated Node.js APIs and managed state using Redux.",
   },
   {
-    id: 6,
+    id: 7,
     title: "Movieland",
     subtitle: "React JS + API integration",
     image: "./assets/images/movieland.jpeg",
@@ -153,7 +165,7 @@ export const projectData = [
       "Built a movie search application using the OMDb API. Integrated API calls for fetching movie data and implemented dynamic search with responsive design.",
   },
   {
-    id: 7,
+    id: 8,
     title: "TIC TAC TOE",
     subtitle: "React JS",
     image: "./assets/images/tictactoe.jpeg",
