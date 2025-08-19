@@ -95,7 +95,8 @@ export const projectData = [
   {
     id: 2,
     title: "Lead Management System",
-    subtitle: "React JS + Typescript + Redux Toolkit + Prime React + Prime Flex + Node JS",
+    subtitle:
+      "React JS + Typescript + Redux Toolkit + Prime React + Prime Flex + Node JS",
     image: "./assets/images/workinprogress.jpg",
     company: true,
     level: "Intermediate",
@@ -106,6 +107,19 @@ export const projectData = [
   },
   {
     id: 3,
+    title: "Authentication App",
+    subtitle:
+      "React Native + Typescript + Redux Toolkit + React Native Paper + Node JS",
+    image: "./assets/images/authapp.jpeg",
+    company: false,
+    level: "Intermediate",
+    currentlyWorking: false,
+    link: "https://github.com/RoushanBhadani/react-native-tailwind-rtk-query-setup",
+    description:
+      "This app is created using React Native with Expo CLI. It uses Redux Toolkit, Formik for validation, and Tailwind Nativewind for styling. Users can sign up, log in, and access their profile via protected routes. Non-authenticated users cannot access protected routes.",
+  },
+  {
+    id: 4,
     title: "Click and Send",
     subtitle: "Next JS + Redux + MaterialUI",
     image: "./assets/images/clickandsend.jpeg",
@@ -117,7 +131,7 @@ export const projectData = [
       "Developed a delivery job platform with real-time driver matching, job posting, and tracking. Integrated secure authentication, REST APIs, and a responsive Material UI design.",
   },
   {
-    id: 4,
+    id: 5,
     title: "Techhut Academy",
     subtitle: "React JS + Bootstrap + Redux",
     image: "./assets/images/Techhut.jpeg",
@@ -129,7 +143,7 @@ export const projectData = [
       "Built an educational platform for course browsing and enrollment with Redux state management. Integrated backend APIs for dynamic course and user data.",
   },
   {
-    id: 5,
+    id: 6,
     title: "Techhut Student",
     subtitle: "React Native + Recoil + React Native Paper",
     image: "./assets/images/TechhutStudent.jpeg",
@@ -140,20 +154,20 @@ export const projectData = [
     description:
       "Created a mobile student portal for course access, mentor interaction, and exams. Integrated APIs for real-time data syncing, managed state with Recoil, and styled with React Native Paper.",
   },
-  // {
-  //   id: 6,
-  //   title: "Replica Weapon Store",
-  //   subtitle: "React JS + Redux + Bootstrap + NodeJs",
-  //   image: "./assets/images/replicaweaponsestore.jpeg",
-  //   company: false,
-  //   level: "Intermediate",
-  //   currentlyWorking: false,
-  //   link: "https://replicaweaponstore.vercel.app/",
-  //   description:
-  //     "Developed an e-commerce store for replica weapons with product catalog, cart, and checkout flow. Integrated Node.js APIs and managed state using Redux.",
-  // },
   {
     id: 7,
+    title: "Replica Weapon Store",
+    subtitle: "React JS + Redux + Bootstrap + NodeJs",
+    image: "./assets/images/replicaweaponsestore.jpeg",
+    company: false,
+    level: "Intermediate",
+    currentlyWorking: false,
+    link: "https://replicaweaponstore.vercel.app/",
+    description:
+      "Developed an e-commerce store for replica weapons with product catalog, cart, and checkout flow. Integrated Node.js APIs and managed state using Redux.",
+  },
+  {
+    id: 8,
     title: "Movieland",
     subtitle: "React JS + API integration",
     image: "./assets/images/movieland.jpeg",
@@ -165,7 +179,7 @@ export const projectData = [
       "Built a movie search application using the OMDb API. Integrated API calls for fetching movie data and implemented dynamic search with responsive design.",
   },
   {
-    id: 8,
+    id: 9,
     title: "TIC TAC TOE",
     subtitle: "React JS",
     image: "./assets/images/tictactoe.jpeg",
