@@ -7,6 +7,7 @@ import ContactMe from './components/ContactMe/ContactMe';
 import Footer from './components/Footer/Footer';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Projects from './components/Projects/Projects';
+import WhatsAppButton from './components/WhatsupButton';
 
 const App = () => {
   return (
@@ -37,6 +38,7 @@ const App = () => {
         />
         <Route path="/projects" element={<Projects />} />
       </Routes>
+      <WhatsAppButton/>
       <Footer />
     </Router>
   );
