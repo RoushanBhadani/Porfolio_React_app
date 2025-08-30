@@ -9,6 +9,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Projects from "./components/Projects/Projects";
 import WhatsAppButton from "./components/WhatsupButton";
 import { Helmet } from "react-helmet";
+import SubscriptionForm from "./components/SubscriptionForm";
 
 const App = () => {
   return (
@@ -48,6 +49,9 @@ const App = () => {
                   </section>
                   <section id="skills">
                     <Skills />
+                  </section>
+                  <section id="subscribe">
+                    <SubscriptionForm />
                   </section>
                   <section id="work-experience">
                     <WorkExperience />

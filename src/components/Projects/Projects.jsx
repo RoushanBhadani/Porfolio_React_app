@@ -3,11 +3,13 @@ import { Button } from "primereact/button";
 import { projectData } from "../../utils/data";
 import { useNavigate } from "react-router-dom";
 import "./Projects.css";
+import SubscriptionForm from "../SubscriptionForm";
 
 export default function Projects() {
   const navigate = useNavigate();
 
   return (
+    <>
     <div className="grid m-4">
       {projectData?.map((project) => (
         <div key={project.id} className="col-12 md:col-4 lg:col-4">
@@ -93,5 +95,9 @@ export default function Projects() {
         </div>
       ))}
     </div>
+    <div className="m-5">
+      <SubscriptionForm/>
+    </div>
+    </>
   );
 }
