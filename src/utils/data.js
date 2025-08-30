@@ -53,7 +53,7 @@ export const SKILLS = [
 export const WORK_EXPERIENCE = [
   {
     title: "Software Developer at Webpristine Technologies",
-    date: "January 2025 - Present",
+    date: "July 2024 - Present",
     responsibility: [
       "Worked as part of a team delivering scalable UI components for the UK-based application Click and Send.",
       "Working on TechHut Academy's web and mobile platforms to enhance user experience and performance.",

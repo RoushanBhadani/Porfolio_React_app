@@ -59,9 +59,8 @@ import SkillsInfoCard from './SkillsInfoCard/SkillsInfoCard';
 const Skills = () => {
   const [selectSkills, setSelectSkills] = useState(SKILLS[0]);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
-  const [openSkill, setOpenSkill] = useState(SKILLS[0].title); // default open
+  const [openSkill, setOpenSkill] = useState(SKILLS[0].title);
 
-  // Update isMobile on resize
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 768);
@@ -72,10 +71,8 @@ const Skills = () => {
 
   const handleSelectSkill = (title) => {
     if (isMobile) {
-      // Toggle if same skill clicked
       setOpenSkill((prev) => (prev === title ? null : title));
     } else {
-      // Desktop - just set selected skill
       const skill = SKILLS.find((item) => item.title === title);
       setSelectSkills(skill);
     }

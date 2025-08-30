@@ -1,5 +1,6 @@
 import React from "react";
 import { Carousel } from "primereact/carousel";
+import { Button } from "primereact/button";
 import "./Hero.css";
 
 const techIcons = [
@@ -59,9 +60,9 @@ const Hero = () => {
             Hi, I'm <span className="hero-name">ROUSHAN</span>
           </h2>
           <h4>Transforming Ideas into Digital Reality</h4>
-          <p className="experience-text">
+          {/* <p className="experience-text">
             Working Experience
-          </p>
+          </p> */}
           <p className="experience-text">
             Contact Number: <a href="tel:7484030370" className="highlight">7484030370</a>
           </p>
@@ -71,6 +72,17 @@ const Hero = () => {
               Applications
             </span>
           </p>
+          {/* <button
+              className="contact-btn"
+              onClick={() => {
+                
+              }}
+              style={{
+                marginTop:"20px"
+              }}
+            >
+              More about me
+            </button> */}
         </div>
 
         <div className="hero-img">

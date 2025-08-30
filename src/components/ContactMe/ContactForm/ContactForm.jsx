@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useFormik } from "formik";
 import { initialValues, validationSchema } from "./formConfig";
 import { useCreateContactMutation } from "../../../redux/slice/apiSlice";
+import emailjs from "emailjs-com";
 
 import "./ContactForm.css";
 
@@ -15,6 +16,17 @@ const ContactForm = () => {
     onSubmit: async (values, { resetForm }) => {
       try {
         await createPost(values).unwrap();
+        await emailjs.send(
+          "service_oadb1mm",
+          "template_x0u12ep",
+          {
+            user_email: values.email,
+            name: values.firstname + " " + values.lastname,
+            message: values.description,
+            time: new Date().toLocaleString(),
+          },
+          "-KnY3XNzugmhghvEk"
+        );
         resetForm();
       } catch (err) {
         console.error("Error submitting form:", err);
