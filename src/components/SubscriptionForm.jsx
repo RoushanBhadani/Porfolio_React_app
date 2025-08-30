@@ -19,7 +19,7 @@ const SubscriptionForm = () => {
   return (
     <>
     <h5 className="mb-6" style={{fontSize:"1.5rem", fontWeight:"600"}}>Get the Latest Updates</h5>
-    <div className="subscription-form" style={{marginBottom:"4rem"}}>
+    <div className="subscription-form mb-7">
         
       <form onSubmit={handleSubmit} style={{display:"flex", flexDirection:"row"}}>
         <input
