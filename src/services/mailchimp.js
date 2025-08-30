@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_KEY = "620a624221eb49ec989f777ebda9c983-us13";
+const API_KEY = "97eba645f2ce17f2ce95574c0ee00f54-us13";
 const SERVER_PREFIX = "us13";
 const AUDIENCE_ID = "9bbc161d86";
 
