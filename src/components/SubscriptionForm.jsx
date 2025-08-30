@@ -3,12 +3,13 @@ import { subscribeToMailchimp } from "../services/mailchimp";
 
 const SubscriptionForm = () => {
   const [email, setEmail] = useState("");
+  const [firstName, setFirstName] = useState("");
   const [status, setStatus] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await subscribeToMailchimp(email);
+      await subscribeToMailchimp(firstName,email);
       setStatus("success");
       setEmail("");
     } catch (error) {
@@ -22,6 +23,13 @@ const SubscriptionForm = () => {
     <div className="subscription-form mb-7">
         
       <form onSubmit={handleSubmit} style={{display:"flex", flexDirection:"row"}}>
+        <input
+          type="text"
+          value={firstName}
+          onChange={(e) => setFirstName(e.target.value)}
+          placeholder="Enter first name"
+          required
+        />
         <input
           type="email"
           value={email}
