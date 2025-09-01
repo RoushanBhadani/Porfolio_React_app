@@ -11,7 +11,14 @@ export const apiSlice = createApi({
         body: data,
       }),
     }),
+    postSubscriber: builder.mutation({
+      query: (data) => ({
+        url: '/api/subscriberUser',
+        method: 'POST',
+        body: data
+      })
+    })
   }),
 });
 
-export const { useCreateContactMutation } = apiSlice;
+export const { useCreateContactMutation, usePostSubscriberMutation } = apiSlice;
