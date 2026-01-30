@@ -21,7 +21,7 @@ const ContactForm = () => {
           "template_x0u12ep",
           {
             user_email: values.email,
-            name: values.firstname + " " + values.lastname,
+            name: values.firstName + " " + values.lastName,
             message: values.description,
             time: new Date().toLocaleString(),
           },
@@ -57,21 +57,21 @@ const ContactForm = () => {
           <div className="name-container">
             <input
               type="text"
-              name="firstname"
-              placeholder={getPlaceholder("firstname", "First Name *")}
-              {...formik.getFieldProps("firstname")}
+              name="firstName"
+              placeholder={getPlaceholder("firstName", "First Name *")}
+              {...formik.getFieldProps("firstName")}
               className={
-                formik.touched.firstname && formik.errors.firstname ? "error-border" : ""
+                formik.touched.firstName && formik.errors.firstName ? "error-border" : ""
               }
             />
 
             <input
               type="text"
-              name="lastname"
-              placeholder={getPlaceholder("lastname", "Last Name")}
-              {...formik.getFieldProps("lastname")}
+              name="lastName"
+              placeholder={getPlaceholder("lastName", "Last Name")}
+              {...formik.getFieldProps("lastName")}
               className={
-                formik.touched.lastname && formik.errors.lastname ? "error-border" : ""
+                formik.touched.lastName && formik.errors.lastName ? "error-border" : ""
               }
             />
           </div>

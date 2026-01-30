@@ -103,7 +103,7 @@ const SubscriptionForm = () => {
               }
             />
 
-            <div>
+            {/* <div>
               <Calendar
                 name="dob"
                 placeholder={getPlaceholder("dob", "Date of birth *")}
@@ -116,7 +116,7 @@ const SubscriptionForm = () => {
                 style={{ borderRadius: 10 }}
                 invalid={formik.touched.dob && formik.errors.dob ? true : false}
               />
-            </div>
+            </div> */}
 
             <input
               type="text"
@@ -130,7 +130,7 @@ const SubscriptionForm = () => {
               }
             />
             <button type="submit" disabled={isLoading}>
-              Subscribe
+              {isLoading ? "Subscribing.." : "Subscribe"}
             </button>
           </form>
         ) : (
