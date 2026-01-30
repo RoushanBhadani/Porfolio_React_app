@@ -53,7 +53,7 @@ const SubscriptionForm = () => {
           "template_mjcpx59",
           {
             user_email: values.email,
-            name: values.fullname,
+            name: values.fullName,
             dob: values.dob,
             time: new Date().toLocaleString(),
           },
@@ -93,11 +93,11 @@ const SubscriptionForm = () => {
           >
             <input
               type="text"
-              name="fullname"
-              placeholder={getPlaceholder("fullname", "Full Name *")}
-              {...formik.getFieldProps("fullname")}
+              name="fullName"
+              placeholder={getPlaceholder("fullName", "Full Name *")}
+              {...formik.getFieldProps("fullName")}
               className={
-                formik.touched.fullname && formik.errors.fullname
+                formik.touched.fullName && formik.errors.fullName
                   ? "error-border"
                   : ""
               }
